@@ -86,7 +86,7 @@ function(
         */ 
         var connectionParameters = {
                     //serverUrl: "/cometd-dev/genesys",
-                    serverUrl: "https://gme.banorte.com:8443/genesys",
+                    serverUrl: "/genesys",
                     genesysServiceId: "request-chat",
                     genesysChannelId: "mobile",
                     endpointRequestChat: "/1/service/request-chat",
