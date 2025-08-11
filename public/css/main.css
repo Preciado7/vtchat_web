@@ -1,0 +1,203 @@
+/* Typography */
+/* Typography */
+/*
+  Ivan Gabriele : http://www.ivangabriele.com/cordova-css-reset/
+  v2.8.0 | 20150421
+  License: MIT
+*/
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+:focus {
+  outline: none; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, button, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+input, select, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  -webkit-transform: translateZ(0);
+  -webkit-user-select: none;
+  line-height: 1; }
+
+caption, th {
+  text-align: left; }
+
+fieldset, img {
+  border: 0; }
+
+html {
+  color: #000; }
+
+legend {
+  color: #000; }
+
+ol, ul {
+  list-style: none; }
+
+sub {
+  vertical-align: text-bottom; }
+
+sup {
+  vertical-align: text-top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+textarea {
+  resize: none; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* Typography */
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Gotham';
+  src: url("../font/Gotham-Medium.ttf") format("truetype"); }
+
+body {
+  font-family: 'Gotham', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.428571429;
+  color: #504146;
+  background-color: #f1f1f1; }
+
+#app {
+  background: #f1f1f1 url("../images/chat_bg.png") no-repeat top center;
+  background-size: 100% 287px;
+  min-height: 287px; }
+  #app .current-date-container {
+    position: fixed;
+    height: 24px;
+    top: 15px;
+    left: 0;
+    right: 0; }
+    #app .current-date-container .current-date {
+      margin: 0 auto;
+      height: 24px;
+      width: 140px;
+      font-size: 11px;
+      line-height: 24px;
+      color: #504146;
+      background-color: #ffc7d1;
+      border-radius: 10px;
+      text-align: center; }
+  #app ul.messages {
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    list-style: none; }
+    #app ul.messages > li .bubble-container .bubble {
+      box-shadow: 0 1px 0 rgba(78, 78, 78, 0.4);
+      position: relative; }
+      #app ul.messages > li .bubble-container .bubble:after {
+        bottom: 0;
+        border-style: solid;
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        box-shadow: 0 1px 0 rgba(78, 78, 78, 0.4); }
+    #app ul.messages > li .bubble-container:before, #app ul.messages > li .bubble-container:after {
+      content: " ";
+      display: table; }
+    #app ul.messages > li .bubble-container:after {
+      clear: both; }
+    #app ul.messages > li .date {
+      color: #555555;
+      font-size: 12px;
+      margin-top: 4px;
+      margin-bottom: 22px; }
+    #app ul.messages > li.left .bubble {
+      color: #504146;
+      font-size: 14px;
+      margin-left: 15px;
+      background-color: #ffffff;
+      padding: 10px;
+      padding-bottom: 7px;
+      border-radius: 5px;
+      border-bottom-left-radius: 0;
+      float: left;
+      max-width: 300px; }
+      #app ul.messages > li.left .bubble:after {
+        left: -10px;
+        border-width: 7px 10px 0 0;
+        border-color: transparent #ffffff; }
+    #app ul.messages > li.left .date {
+      padding-left: 15px;
+      text-align: left; }
+    #app ul.messages > li.right .bubble {
+      color: #ffffff;
+      font-size: 14px;
+      margin-right: 15px;
+      background-color: #504146;
+      padding: 10px;
+      padding-bottom: 7px;
+      border-radius: 5px;
+      border-bottom-right-radius: 0;
+      float: right;
+      max-width: 300px; }
+      #app ul.messages > li.right .bubble:after {
+        right: -10px;
+        border-width: 7px 0 0 10px;
+        border-color: transparent #504146; }
+    #app ul.messages > li.right .date {
+      padding-right: 15px;
+      text-align: right; }
